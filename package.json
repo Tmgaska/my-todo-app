@@ -1,4 +1,5 @@
 {
+<<<<<<< HEAD
   "name": "my-todo-app",
   "private": true,
   "version": "0.0.0",
@@ -26,5 +27,100 @@
     "typescript": "~5.9.3",
     "typescript-eslint": "^8.45.0",
     "vite": "^7.1.7"
+=======
+  "name": "@uni-face/react-package-starter",
+  "version": "0.0.4",
+  "description": "Please write a description.",
+  "type": "module",
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "scripts": {
+    "prepare": "tsc",
+    "build": "rimraf dist && run-p build:minify build:types",
+    "build:dev": "rimraf dist && run-p build:watch build:types",
+    "build:watch": "node --loader ts-node/esm scripts/bundle.ts",
+    "build:minify": "NODE_ENV=production node --loader ts-node/esm scripts/bundle.ts",
+    "build:types": "tsc --emitDeclarationOnly",
+    "lint": "eslint --ext .js,.jsx,.ts,.tsx --ignore-path .gitignore .",
+    "fixlint": "eslint --ext .js,.jsx,.ts,.tsx --ignore-path .gitignore . --fix",
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "storybook": "start-storybook -p 6006",
+    "build-storybook": "build-storybook"
+  },
+  "author": "uni-face.co.,ltd",
+  "license": "ISC",
+  "files": [
+    "dist",
+    "README.md",
+    "CONTRIBUTING.md"
+  ],
+  "engines": {
+    "node": ">=12"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/uni-face/react-package-starter.git"
+  },
+  "publishConfig": {
+    "access": "restricted",
+    "registry": "https://npm.pkg.github.com/"
+  },
+  "dependencies": {
+    "@material-ui/core": "^4.11.0",
+    "@material-ui/icons": "^4.9.1",
+    "@material-ui/lab": "^4.0.0-alpha.57",
+    "@material-ui/pickers": "^3.2.10"
+  },
+  "peerDependencies": {
+    "react": "^17.0.2",
+    "react-dom": "^17.0.2"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.20.5",
+    "@commitlint/cli": "^17.3.0",
+    "@commitlint/config-conventional": "^17.3.0",
+    "@storybook/addon-actions": "^6.5.14",
+    "@storybook/addon-essentials": "^6.5.14",
+    "@storybook/addon-interactions": "^6.5.14",
+    "@storybook/addon-links": "^6.5.14",
+    "@storybook/builder-webpack4": "^6.5.14",
+    "@storybook/manager-webpack4": "^6.5.14",
+    "@storybook/react": "^6.5.14",
+    "@storybook/testing-library": "^0.0.13",
+    "@types/async-lock": "^1.3.0",
+    "@types/node": "^18.11.10",
+    "@typescript-eslint/eslint-plugin": "^5.45.1",
+    "@typescript-eslint/parser": "^5.45.1",
+    "babel-loader": "^8.3.0",
+    "esbuild": "^0.15.18",
+    "eslint": "^8.29.0",
+    "eslint-config-prettier": "^8.5.0",
+    "eslint-plugin-prettier": "^4.2.1",
+    "eslint-plugin-react": "^7.31.11",
+    "eslint-plugin-storybook": "^0.6.8",
+    "husky": "^8.0.2",
+    "lint-staged": "^13.1.0",
+    "npm-run-all": "^4.1.5",
+    "post-npm-install": "^2.0.0",
+    "prettier": "^2.8.0",
+    "react": "^17.0.2",
+    "react-dom": "^17.0.2",
+    "rimraf": "^3.0.2",
+    "typescript": "^4.9.3"
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "lint-staged",
+      "post-merge": "post-npm-install",
+      "post-rebase": "post-npm-install",
+      "commit-msg": "commitlint -E HUSKY_GIT_PARAMS"
+    }
+  },
+  "lint-staged": {
+    "!(sw.|workbox)*.{js,jsx,ts,tsx}": [
+      "eslint --fix",
+      "git add"
+    ]
+>>>>>>> 84c1b1d4e00d96db9a530c48a62c6cceebc81b5f
   }
 }
