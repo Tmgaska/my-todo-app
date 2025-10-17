@@ -1,11 +1,9 @@
 {
-<<<<<<< HEAD
   "files": [],
   "references": [
     { "path": "./tsconfig.app.json" },
     { "path": "./tsconfig.node.json" }
-  ]
-=======
+  ],
   "compilerOptions": {
     "target": "ES2019",
     "module": "ES2022",
@@ -22,5 +20,4 @@
   },
   "exclude": ["node_modules", "dist"],
   "include": ["src/**/*.ts"]
->>>>>>> 84c1b1d4e00d96db9a530c48a62c6cceebc81b5f
 }
