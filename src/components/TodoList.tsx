@@ -1,13 +1,18 @@
-const TodoList = () => {
-  const todos = ["Task", "Do Complete", "Incomplete"];
+import React from 'react'
+import '../App.css'
+
+const TodoList: React.FC = () => {
+  const todos: string[] = ['Task', 'Complete', 'Incomplete']
 
   return (
-    <ul style={{ listStyle: "none", padding: 0, margin: 0 }}>
-      {todos.map((todo, index) => (
-        <li key={index}>{todo}</li>
+    <div className="todo-container">
+      {todos.map((item, index) => (
+        <div key={index} className="todo-item">
+          {item}
+        </div>
       ))}
-    </ul>
-  );
-};
+    </div>
+  )
+}
 
-export default TodoList;
+export default TodoList

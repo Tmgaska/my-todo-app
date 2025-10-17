@@ -1,15 +1,45 @@
-.app-container{
-  max-width: 600px;
-   max-width: 600px;
-  margin: 40px auto;
+
+
+
+.app-container {
   padding: 20px;
-  background-color: blue;
-  border-radius: 10px;
-  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
-  text-align: center;
-  font-family: Arial, sans-serif;
 }
-.app-title {
-  color: #333;
-  margin-bottom: 20px;
+.header {
+  display:flex;
+  justify-content:center;
+  margin-bottom:20px;
+}
+.title{
+  
+ padding: 15px 40px;
+  background-color: #c8eaf1;
+  border: 3px solid #000;
+  font-size: 50px;
+  font-weight: bold;
+
+}
+.app-container{
+  justify-content: flex-start;
+margin-bottom: 30px;
+}
+.add-button {
+  padding: 10px 20px;
+  font-size: 10px;
+  background-color: #c8eaf1;
+  border: 2px solid #000;
+  cursor: pointer;
+}
+
+.todo-container {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  padding-left: 20px;
+}
+
+.add-button-container {
+  padding: 10px 20px;
+  font-size: 10px;
+ text-align: right;
+
 }
